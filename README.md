@@ -25,6 +25,16 @@ The artwork (generated in NetLogo) exhibits Rule 130 of Elementary Cellular Auto
 Its pattern can also be illustrated through:
 ![image](https://user-images.githubusercontent.com/104493864/215320507-9ec08300-661d-4e68-ada7-857e5ecd8adc.png)
 
+## Artwork 4: Sunflower Model
+
+![](https://github.com/alyannaabalos/CMPLXSY_CA_Art/blob/main/Sunflower%20Model/Sunflower%20Model.gif)
+
+This model demonstrates how the spiral patterns found in various parts of plants, such as the seeds, petals, and branches, form naturally during the growth of the flower.
+
+To recreate the art, set the following rules to the corresponding values:
+`NUM-COLORS` = 14,
+`STEP-SIZE` = 0.011,
+`TURN-INCREMENT` = 0.617
 
 # References
 http://atlas.wolfram.com/01/01/135/01_01_1_135.html#01_01_2_135
