@@ -16,6 +16,16 @@ The artwork (generated in NetLogo) exhibits Rule 150 of Elementary Cellular Auto
 
 ![rule 150](https://user-images.githubusercontent.com/92851199/215271991-4c540921-1ed4-47b9-a709-17160ad3f358.jpg)
 
+## Artwork 3: Elementary Cellular Automata Rule 135
+
+![image](https://user-images.githubusercontent.com/104493864/215320355-0c1a652a-f233-4a7b-bce1-0a7ff6f4907a.png)
+
+The artwork (generated in NetLogo) exhibits Rule 130 of Elementary Cellular Automata. It begins with a singular colored cell, which then generates rows with multiple patches each dependent on its neighbors. It follows the boolean rule of ![image](https://user-images.githubusercontent.com/104493864/215320476-a2106d3a-07db-4ff5-b9a5-a002eb95d73a.png)
+
+Its pattern can also be illustrated through:
+![image](https://user-images.githubusercontent.com/104493864/215320507-9ec08300-661d-4e68-ada7-857e5ecd8adc.png)
+
 
 # References
+http://atlas.wolfram.com/01/01/135/01_01_1_135.html#01_01_2_135
 * [NetLogo Models Library](https://ccl.northwestern.edu/netlogo/models/)
