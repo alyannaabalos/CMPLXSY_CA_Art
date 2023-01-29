@@ -1,32 +1,34 @@
+patches-own [new-color]
 to setup
   clear-all
+  reset-ticks
   ask patches[
-   set pcolor bgc
+    set pcolor one-of [white red]
   ]
-  create-turtles nooft[
-    pen-down
-    set color red
-    set heading who * (360 / nooft)
-  ]
-
 end
 
-to go
-  let counter 2
-  ask turtles[
-    forward 1
-    right 10
-  ]
 
-  Repeat loops[
-    if [xcor] of turtle 0 < -2 + counter[
-      ask turtles
-      [
-        fd 1 * counter
-        right 10
+
+to go
+  tick
+
+  ask patches[
+    let numNeigh count( neighbors with [pcolor = red])
+    set new-color pcolor
+    if-else(pcolor = red)[
+      if( numNeigh < 2 or numNeigh > 3)[
+        set new-color white
       ]
-      set counter counter + 1
+
+    ][
+
+      if( numNeigh = 3)[
+        set new-color red
+      ]
     ]
+  ]
+  ask patches [
+    set pcolor new-color
   ]
 end
 @#$#@#$#@
@@ -44,8 +46,8 @@ GRAPHICS-WINDOW
 1
 1
 0
-0
-0
+1
+1
 1
 -16
 16
@@ -58,10 +60,10 @@ ticks
 30.0
 
 BUTTON
-59
-78
-122
-111
+64
+48
+127
+81
 NIL
 setup
 NIL
@@ -75,13 +77,13 @@ NIL
 1
 
 BUTTON
-52
-158
-115
-191
+93
+131
+156
+164
 NIL
 go
-NIL
+T
 1
 T
 OBSERVER
@@ -90,51 +92,6 @@ NIL
 NIL
 NIL
 1
-
-SLIDER
-74
-256
-246
-289
-bgc
-bgc
-0
-100
-9.9
-0.1
-1
-NIL
-HORIZONTAL
-
-SLIDER
-49
-340
-221
-373
-nooft
-nooft
-0
-100
-70.0
-1
-1
-NIL
-HORIZONTAL
-
-SLIDER
-49
-440
-221
-473
-loops
-loops
-0
-100
-50.0
-1
-1
-NIL
-HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?
